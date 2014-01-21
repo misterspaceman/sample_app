@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
+require 'rbconfig'
+
+gem 'wdm', '>= 0.0.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cigwin/i
+
 #ruby-gemset=railstutorial_rails_4_0
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -9,6 +13,10 @@ gem 'pg', '0.15.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec', '2.5.0'
+	gem 'spork-rails', '4.0.0'
+	gem 'guard-spork', :github => 'guard/guard-spork'
+	gem 'childprocess', '0.3.6'
 end
 
 group :test do
