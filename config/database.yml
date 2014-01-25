@@ -16,6 +16,7 @@ development:
   pool: 5
   username: mikey
   password: root
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,11 +29,11 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: sample_app
+  database: test_sample_app
   pool: 5
   username: mikey
   password: root
-
+  host: localhost
 
 production:
   adapter: sqlite3

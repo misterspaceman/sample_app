@@ -10,6 +10,8 @@ gem 'wdm', '>= 0.0.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cigwin/i
 gem 'rails', '4.0.0.rc2'
 gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.2.0'
+#gem 'bcrypt-ruby', '3.1.2'
+gem 'bcrypt-ruby', '~>3.0.0'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
